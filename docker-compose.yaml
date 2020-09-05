@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:12.4-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+  adminer:
+    image: adminer:4.7.7-standalone
+    ports:
+      - 8080:8080
